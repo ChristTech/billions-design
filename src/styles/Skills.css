@@ -1,0 +1,58 @@
+.skills {
+    overflow: hidden;
+    padding: 3rem 0;
+}
+
+.skills .section-title {
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+}
+
+.skills-track-wrapper {
+    overflow: hidden;
+    width: 100%;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.skills-track {
+    display: flex;
+    gap: 1.5rem;
+    width: max-content;
+    animation: scrollTrack 30s linear infinite;
+}
+
+.skills-track:hover {
+    animation-play-state: paused;
+}
+
+.skill-pill {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.7rem 1.4rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 50px;
+    white-space: nowrap;
+    color: var(--text-color);
+    font-size: 0.95rem;
+    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.skill-pill:hover {
+    background: rgba(0, 255, 255, 0.1);
+    border-color: var(--primary-color);
+    color: #fff;
+}
+
+.skill-icon {
+    font-size: 1.2rem;
+}
+
+@keyframes scrollTrack {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}

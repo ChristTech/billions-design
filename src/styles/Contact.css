@@ -1,0 +1,129 @@
+.contact {
+    background-color: transparent;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-info h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.contact-info p {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+/* ── Contact links ── */
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-color);
+    font-size: 1rem;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.contact-link:hover {
+    color: var(--primary-color);
+}
+
+/* ── Icon wrapper circle ── */
+.contact-icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contact-link:hover .contact-icon-wrap {
+    transform: scale(1.12);
+}
+
+/* Email – cyan/teal accent */
+.email-icon {
+    background: rgba(0, 200, 210, 0.12);
+    border: 1.5px solid rgba(0, 200, 210, 0.35);
+    color: #00c8d2;
+}
+
+.contact-link:hover .email-icon {
+    box-shadow: 0 0 14px rgba(0, 200, 210, 0.35);
+}
+
+/* WhatsApp – green accent */
+.whatsapp-icon {
+    background: rgba(37, 211, 102, 0.12);
+    border: 1.5px solid rgba(37, 211, 102, 0.35);
+    color: #25d366;
+}
+
+.contact-link:hover .whatsapp-icon {
+    box-shadow: 0 0 14px rgba(37, 211, 102, 0.35);
+}
+
+/* ── SVG icon size ── */
+.contact-svg-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* ── Form ── */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(30, 30, 30, 0.7);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.15);
+}
+
+/* Sent state */
+.btn-sent {
+    opacity: 0.8;
+    cursor: default;
+}
+
+@media screen and (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}

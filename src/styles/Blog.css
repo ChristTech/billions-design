@@ -1,0 +1,19 @@
+.blog-placeholder {
+    text-align: center;
+    padding: 4rem;
+    background: rgba(20, 20, 20, 0.6);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.blog-placeholder p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.blog-placeholder span {
+    color: var(--text-muted);
+}
